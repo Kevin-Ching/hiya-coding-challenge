@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# VSCode Settings
+.vscode
+
+# Build Folder
+build/

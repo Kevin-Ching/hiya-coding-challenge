@@ -1,0 +1,10 @@
+call Bob Alice 1711132463 // Bob calls Alice at 2024-03-22T11:34:23-0700
+call Carl Doug 1711132465 // Carl calls Doug at 2024-03-22T11:34:25-0700
+hangup Alice Bob 1711132467 // Alice hangs up on Bob (elapsed 4s)
+hangup Carl Doug 1711132468 // Carl hangs up on Doug (elapsed 3s)
+call Ed Frank 1711132481 // Ed calls Frank at 2024-03-22T11:34:41-0700
+call Bob Doug 1711132483 // Bob calls Doug at 2024-03-22T11:34:43-0700
+hangup Doug Bob 1711132484 // Doug hangs up on Bob (elapsed 1s)
+hangup Ed Frank 1711132485 // Ed hangs up on Frank (elapsed 4s)
+call Ed Carl 1711132487 // Ed calls Carl at 2024-03-22T11:34:47-0700
+hangup Carl Ed 1711132490 // Carl hangs up on Ed (elapsed 3s)
