@@ -24,7 +24,3 @@ public:
         return from_equal && to_equal && timestamp_equal;
     }
 };
-
-class Call : public CallEvent {};
-
-class Hangup : public CallEvent {};
