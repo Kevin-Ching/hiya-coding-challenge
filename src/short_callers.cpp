@@ -119,8 +119,6 @@ int main(int argc, char** argv) {
                 }
 
                 // Check we are hanging up with the correct person
-
-                // Record call time
                 CallEvent call_event = ongoing_calls[event.from];
                 if (!call_event.isEqual(ongoing_calls[event.to])) {
                     cout << "Hangup error. " << event.from << " cannot hang up on " << event.to 
@@ -128,6 +126,7 @@ int main(int argc, char** argv) {
                     return 1;
                 }
 
+                // Record call time
                 call_times[call_event.from].push_back(event.timestamp - call_event.timestamp);
 
                 ongoing_calls.erase(event.from);
@@ -137,6 +136,8 @@ int main(int argc, char** argv) {
             return input_error();
         }
     }
+
+    infile.close();
 
     /* List of callers with an average call duration under 5 seconds */
     vector<string> short_callers;
@@ -172,8 +173,6 @@ int main(int argc, char** argv) {
     }
 
     cout << "]" << endl;
-
-    infile.close();
 
     return 0;
 }
