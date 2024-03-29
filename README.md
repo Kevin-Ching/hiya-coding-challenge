@@ -45,3 +45,15 @@ should output
 ```bash
 [Bob]
 ```
+and 
+```bash
+./build/short_callers -a inputs/example.txt
+```
+should output 
+```bash
+Caller: Bob,    Average: 2.5
+Caller: Carl,   Average: 17
+Caller: Ed,     Average: 20
+
+[Bob]
+```
