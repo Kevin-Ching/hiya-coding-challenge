@@ -92,7 +92,7 @@ int main(int argc, char** argv) {
                 return input_error();
             }
 
-            // Check timestamp
+            // Make sure timestamps are non-decreasing
             if (event.timestamp < last_timestamp) {
                 cout << "Not time-ordered error. Timestamp " << event.timestamp << " appears after " << last_timestamp  << "." << endl;
                 return 1;
